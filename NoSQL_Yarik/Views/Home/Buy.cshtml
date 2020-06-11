@@ -1,0 +1,31 @@
+﻿@{
+}
+<div>
+    <h3>Форма оформления покупки оружия</h3>
+    <p>Для оформления покупки заполните следующие поля:</p>
+    <form method="post">
+        <table>
+            <tr>
+                <td></td>
+                <td><input type="hidden" name="Data" value="@TimeNow.GetNowTime()" /> </td>
+            </tr>
+            <tr>
+                <td>Адрес:</td>
+                <td><input type="text" name="Adress" /></td>
+            </tr>
+            <tr>
+                <td>Ид Юзера (да-да):</td>
+                <td><input type="text" name="fk_Id_User"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="hidden" name="Started" value="true" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="hidden" name="Completed" value="false" /></td>
+            </tr>
+            <tr><td><input type="submit" value="Отправить" /> </td><td></td></tr>
+        </table>
+    </form>
+</div>

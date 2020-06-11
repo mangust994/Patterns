@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewData["Title"] = "Update";
+}
+
+<div>
+    <h3>Форма</h3>
+    <p>Для обновления</p>
+    <form method="post">
+        <table>
+            <tr>
+                <td></td>
+                <td><input type="hidden" name="IdProduct" value="@ViewBag.Gun.IdProduct" /> </td>
+            </tr>
+            <tr>
+                <td>Название:</td>
+                <td><input type="text" name="Name" value="@ViewBag.Gun.Name" /></td>
+            </tr>
+            <tr>
+                <td>Цена:</td>
+                <td><input type="text" name="Price" value="@ViewBag.Gun.Price" /></td>
+            </tr>
+            <tr>
+                <td>Описание</td>
+                <td><input type="text" name="Decription" value="@ViewBag.Gun.Decription" /></td>
+            </tr>
+            <tr>
+                <td>Количество</td>
+                <td><input type="text" name="Quantity" value="@ViewBag.Gun.Quantity" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="hidden" name="fk_Id_Category" value="@ViewBag.Gun.fk_Id_Category" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="hidden" name="fk_Id_License" value="@ViewBag.Gun.fk_Id_License" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="hidden" name="fk_Id_Purveyer" value="@ViewBag.Gun.fk_Id_Purveyer" /></td>
+            </tr>
+            <tr><td><input type="submit" value="Обновить" /> </td><td></td></tr>
+            <tr><td><input type="button" value="Вернуть назад" onclick="location.href='@Url.Action("Updat2", "Home")'" /></td><td></td></tr>
+        </table>
+    </form>
+</div>
+

@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<h3>10 последних заказов</h3>
+<table>
+    <tr>
+        <td>Дата</td>
+        <td>Адрес</td>
+        <td>Заказ начат</td>
+        <td>Заказ закончен</td>
+        <td>Пользователь</td>
+        <td></td>
+    </tr>
+    @foreach (var gun in ViewBag.Orders)
+    {
+    <tr>
+        <td>@gun.Data</td>
+        <td>@gun.Adress</td>
+        <td>@gun.Started</td>
+        <td>@gun.Completed</td>
+        <td>@gun.fk_Id_User</td>
+        <td><a href="~/Home/Delete/@gun.IdOrder">Удалить</a></td>
+    </tr>
+
+    }
+</table>
